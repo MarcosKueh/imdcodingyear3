@@ -1,0 +1,13 @@
+#info {
+  position: absolute;
+  	top: 450px;
+  	width: 100%;
+  	text-align: center;
+  	z-index: 100;
+  	display:block;
+font-family:'Helvetica Black', sans-serif;
+font-size:2em;
+font-style:bold;
+color: yellow;
+
+}

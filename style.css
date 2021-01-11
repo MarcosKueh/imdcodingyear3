@@ -1,0 +1,245 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+#play-button {
+  z-index: 100;
+  position: absolute;
+  left: 50px;
+  top: 100px;
+
+
+}
+
+.p5Canvas {
+  background: black;
+  z-index: 2;
+  margin-top: -5vh;
+  margin-left: -10vw;
+  min-width:120vw !important;
+  min-height: 120vh !important;
+}
+
+/* #bg-video {
+  width: 110vw;
+  position: absolute;
+  top: 0;
+  left:0;
+  min-height: 100vh;
+  z-index: -1 !important;
+} */
+body {
+  /* background: black; */
+  width:100vw !important;
+  height: 100vh !important;
+  overflow: hidden;
+}
+
+    /*navigation/
+    body
+{
+  margin: 0;
+  padding: 0;
+
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+
+
+
+    /*cursor*/
+
+    *{
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+      font-family: Raleway;
+    }
+
+    p{
+      font-family: Raleway;
+      font-weight: bold;
+      color: yellow;
+    }
+
+    p1{
+      font-family: Raleway;
+      font-weight: bold;
+      color: lightblue;
+    }
+
+
+    h1{
+    font-family: Raleway;
+    font-style: italic;
+    font-weight: normal;
+    color: yellow;
+    }
+    #mydivheader,#mydiv2header,#mydiv3header, #mydiv4header, #mydiv5header{
+           cursor: move;
+       }
+
+       #mydiv5 {
+    position: absolute;
+    z-index: 8;
+    left: 900px;
+    top: 300px;
+    background-color: lightblue;
+    text-align: center;
+     }
+     #text{
+       width: 400px;
+       height: 300px;
+       overflow: scroll;
+     }
+
+    #mydiv {
+    position: absolute;
+    z-index: 11;
+    left: 850px;
+    top: 80px;
+    background-color: rebeccapurple;
+    text-align: center;
+
+       }
+        #mydiv2 {
+    position: absolute;
+    z-index: 9;
+    left: 1200px;
+    top: 320px;
+    background-color: magenta;
+    text-align: center;
+       }
+       #mydiv3 {
+    position: absolute;
+    z-index: 8;
+    left: 80px;
+    top: 120px;
+    background-color: deeppink;
+    text-align: center;
+       }
+       #mydiv4 {
+    position: absolute;
+    z-index: 8;
+    left: 120px;
+    top: 300px;
+    background-color: mediumpurple;
+    text-align: center;
+      }
+      #text{
+        width: 400px;
+        height: 300px;
+        overflow: scroll;
+      }
+
+    /* #defaultCanvas0{
+      position: absolute;
+      top:100px;
+      left:330px;
+      z-index: 900px;
+      visibility: inherit;
+      display: block;
+    } */
+
+      }
+#overlays{
+    position:absolute;
+    z-index: 97;
+    left:40%;
+    top:30%;
+    background-color: transparent;
+    display: block;
+}
+
+
+#overlays #myVideo{
+    position: absolute;
+    z-index: 8;
+    left: 40%;
+    top: 30%;
+    animation: videoseq 5s;
+    animation-delay: 20s;
+}
+ 
+#overlays #myVideoTwo{
+    position: absolute;
+    z-index: 8;
+    left: 25%;
+    top: 30%;
+    animation: videoseq 5s;
+    animation-delay: 80s;
+}
+
+ 
+#overlays #myVideoThree{
+    position: absolute;
+    z-index: 8;
+    left: 15%;
+    top: 20%;
+    animation: videoseq 5s;
+    animation-delay: 90s;
+}
+ 
+#overlays #myVideoFour{
+    position: absolute;
+    z-index: 8;
+    left: 5%;
+    top: 15%;
+    animation: videoseq 5s;
+    animation-delay: 120s;
+}
+ 
+#overlays #myVideoFive{
+    position: absolute;
+    z-index: 8;
+    left: 35%;
+    top: 40%;
+    animation: videoseq 5s;
+    animation-delay: 160s;
+}
+ 
+#overlays #myVideoSix{
+    position: absolute;
+    z-index: 8;
+    left: 40%;
+    top: 40%;
+    animation: videoseq 5s;
+    animation-delay: 200s;
+}
+ 
+#overlays #myVideoEight{
+    position: absolute;
+    z-index: 8;
+    right: 5%;
+    top:5%;
+    animation: videoseq 5s;
+    animation-delay: 240s;
+}
+#overlays #myVideoNine{
+    position: absolute;
+    z-index: 8;
+    right: 25%;
+    top: 10%;
+    animation: videoseq 5s;
+    animation-delay: 280s;
+}
+
+#div6 {
+position: absolute;
+z-index: 8;
+right: 2%;
+top: 85%;
+mix-blend-mode: screen;
+    transform: scaleX(-1);
+		}
+
+
+@keyframes videoseq { 
+	from { opacity: 0}
+  to   { opacity: 1}
+}
+
