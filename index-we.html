@@ -1,0 +1,142 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>The Game of Life</title>
+    <script src="p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+  <!--   <script src="drag.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+    <!-- <audio autoplay="true" src="sound.mp3"></audio> -->
+</head>
+
+<body style="background:black;">
+
+  <!-- <button type="button" id="play-button">Play</button> -->
+
+<!--   <video src="thestack.mp4" autoplay muted id="bg-video">
+
+</video> -->
+  <script src="sketch.js"></script>
+
+   
+          
+    
+  <div id="mydiv4">
+
+    <div id="mydiv4header"><p>SCRIPT</p></div>
+    <div id="text">
+      <h1>"The state continues by extending up and down into the new scales offered by multiple interdependent layers of The Stack, which sometimes do not blend into one form, but rather produce unresolved compound images and unresolved compound worlds, jurisdictions, frontlines, and boundaries. The gaps opened up by this rotation, a simultaneous coming undone and refortification, is where the reprogrammability of things plays out. The touchpoints between these layers make substitute locations and addresses, variously new and primeval; they are translations, wet with life, descriptive and consistent with what can be repeated over and again as governance. <br>
+        Geographies that were comfortable and doxic are now transient and alien, inhabited uncannily. But even as strange geographies corrugate, fracture, and smear worldly scale and tempo, the ground isn’t somehow evaporated into virtual information flux; to the contrary, we are brought to a certain end of nonplace."</h1>
+    </div>
+  </div>
+
+  <div id="mydiv5">
+    <div id="mydiv5header"><p>SCRIPT</p></div>
+      <div id="text">
+        <h1>"Perhaps ours is not a world of information but a wall of noise scrambled territories, institutions, constitutions, sovereignties, citizenships, hardwares, softwares, protocols, interfaces, databases, patterns, platforms, cities, muscles, skins, organs, failing presumptions, exotic refrains, domains, settlements, penultimate boundaries”or, better yet, directly into the forms-to-come.We need to identify global information systems as perhaps the single most important powerful engine of the new world that would demand new organizing architectures.To do this, it draws on the multilayered structure of software, hardware, and network stacks that arrange different technologies vertically within a modular, interdependent order.The Stack, as examined here, comprises six interdependent layers: Earth, Cloud, City, Address, Interface,User."</h1>
+      </div>
+  </div>
+    
+ <div id="overlays">
+    <div id="video">
+      <video id="myVideo" width="320" height="240" autoplay>
+          <source src="01.mp4" type="video/mp4">
+      </video>
+      <video id="myVideoTwo" width="320" height="240" autoplay>
+          <source src="02.mp4" type="video/mp4">
+      </video>
+        <video id="myVideoThree" width="320" height="240" autoplay>
+          <source src="03.mp4" type="video/mp4">
+      </video>
+        <video id="myVideoFour" width="320" height="240" autoplay>
+          <source src="04.mp4" type="video/mp4">
+      </video>
+        <video id="myVideoFive" width="320" height="240" autoplay>
+          <source src="05.mp4" type="video/mp4">
+      </video>
+        <video id="myVideoSix" width="320" height="240" autoplay>
+          <source src="06.mp4" type="video/mp4">
+      </video>
+        <video id="myVideoEight" width="320" height="240" autoplay>
+          <source src="08.mp4" type="video/mp4">
+      </video>
+        <video id="myVideoNine" width="320" height="240" autoplay>
+          <source src="09.mp4" type="video/mp4">
+      </video>
+    </div>  
+    <div id="videoEnd" style="display:none"></div>
+</div>  
+<div id="div6">
+           <a href="index.html"><img src="arrow.gif" class='tri' width="150" height="100"></a>
+
+</div>
+</body>
+<script>
+
+// Make the DIV element draggable:
+    dragElement(document.getElementById("mydiv4"));
+    dragElement(document.getElementById("mydiv5"));
+
+    function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+      // if present, the header is where you move the DIV from:
+      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+      // otherwise, move the DIV from anywhere inside the DIV:
+      elmnt.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+      // stop moving when mouse button is released:
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+    }
+//videooverlay
+    
+    document.getElementById('myVideo').addEventListener('ended',myHandler,false);
+        function myHandler(e) {
+            if(!e) { e = window.event; }
+            // What you want to do after the event
+            document.getElementById('myVideo').style.display="none";
+            document.getElementById('myVideoTwo').style.display="none";
+             document.getElementById('myVideoThree').style.display="none";
+             document.getElementById('myVideoFour').style.display="none";
+             document.getElementById('myVideoFive').style.display="none";
+             document.getElementById('myVideoSix').style.display="none";
+             document.getElementById('myVideoEight').style.display="none";
+            document.getElementById('myVideoNine').style.display="none";
+            document.getElementById('videoEnd').style.display="block";
+        }
+   
+   
+</script>
+
+
+</html>
